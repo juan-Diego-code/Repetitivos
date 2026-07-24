@@ -1,0 +1,70 @@
+<svg width="480" height="480" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="badgeClip">
+      <rect x="0" y="0" width="480" height="480" rx="96"/>
+    </clipPath>
+  </defs>
+
+  <!-- Fondo -->
+  <rect x="0" y="0" width="480" height="480" rx="96" fill="#171616"/>
+
+  <g clip-path="url(#badgeClip)">
+    <!-- Carril / línea de conteo de fondo -->
+    <g stroke="#2a2726" stroke-width="10">
+      <line x1="0" y1="360" x2="480" y2="360"/>
+    </g>
+    <g stroke="#2a2726" stroke-width="8" stroke-dasharray="24 20">
+      <line x1="0" y1="392" x2="480" y2="392"/>
+    </g>
+
+    <!-- Auto (silueta geométrica, minimal) -->
+    <g>
+      <!-- sombra de contacto -->
+      <ellipse cx="240" cy="352" rx="150" ry="14" fill="#000000" opacity="0.25"/>
+
+      <!-- cuerpo inferior -->
+      <path d="M100 300
+               L128 246
+               Q140 226 164 226
+               L316 226
+               Q340 226 352 246
+               L380 300
+               Q392 306 392 320
+               L392 336
+               Q392 348 380 348
+               L100 348
+               Q88 348 88 336
+               L88 320
+               Q88 306 100 300 Z"
+            fill="#F95C4B"/>
+
+      <!-- cabina -->
+      <path d="M160 226
+               L182 178
+               Q190 166 206 166
+               L274 166
+               Q290 166 298 178
+               L320 226 Z"
+            fill="#F95C4B"/>
+
+      <!-- ventana -->
+      <path d="M186 220
+               L204 182
+               Q207 176 214 176
+               L266 176
+               Q273 176 276 182
+               L294 220 Z"
+            fill="#171616"/>
+      <line x1="240" y1="176" x2="240" y2="220" stroke="#F95C4B" stroke-width="6"/>
+
+      <!-- faros -->
+      <rect x="366" y="272" width="20" height="12" rx="4" fill="#171616"/>
+      <rect x="94" y="272" width="20" height="12" rx="4" fill="#171616"/>
+
+      <!-- ruedas -->
+      <circle cx="164" cy="348" r="34" fill="#171616" stroke="#F95C4B" stroke-width="8"/>
+      <circle cx="316" cy="348" r="34" fill="#171616" stroke="#F95C4B" stroke-width="8"/>
+    </g>
+
+  </g>
+</svg>
