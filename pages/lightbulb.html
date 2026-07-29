@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conteo de Focos por Color</title>
+<link rel="icon" type="image/png" href="../assets/images/lightbulb.png">
+<link rel="stylesheet" href="../assets/css/lightbulb.css">
+</head>
+<body>
+
+    <nav class="nav-principal">
+    <span class="nav-marca">Ejercicios Repetitivos · JS</span>
+    <ul>
+        <li><a href="../pages/index.html">CCS</a></li>
+        <li><a href="../pages/lightbulb.html">Focos</a></li>
+    </ul>
+    </nav>
+
+    <main class="wrap">
+
+    <header class="encabezado">
+        <p class="eyebrow">Control de calidad · Lote de producción</p>
+        <h1>Conteo de focos por color</h1>
+        <p class="descripcion">Registra el color de cada foco del lote, uno por uno, y obtén el total de existencias por color.</p>
+    </header>
+
+    <!-- Paso 1: definir el tamaño del lote -->
+    <section class="tarjeta" id="panel-inicio">
+        <div class="campo">
+        <label for="cantidad">Tamaño del lote (N)</label>
+        <input type="number" id="cantidad" min="1" step="1" placeholder="Ej. 10">
+        </div>
+        <button id="btn-iniciar">Iniciar conteo</button>
+    </section>
+
+    <!-- Paso 2: registrar el color de cada foco -->
+    <section class="tarjeta oculto" id="panel-registro">
+        <div class="progreso">
+        <span id="texto-progreso">Foco 1 de N</span>
+        <div class="barra">
+            <div class="barra-relleno" id="barra-relleno"></div>
+        </div>
+        </div>
+
+        <div class="opciones-color">
+        <button class="opcion-color" data-color="verde">
+            <span class="foco foco-verde"></span> Verde
+        </button>
+        <button class="opcion-color" data-color="blanco">
+            <span class="foco foco-blanco"></span> Blanco
+        </button>
+        <button class="opcion-color" data-color="rojo">
+            <span class="foco foco-rojo"></span> Rojo
+        </button>
+        </div>
+    </section>
+
+    <!-- Paso 3: resultado final -->
+    <section class="tarjeta oculto" id="panel-resultado">
+        <h2>Resultado del lote</h2>
+
+        <div class="fila-resultado">
+        <span class="foco foco-verde"></span>
+        <span class="etiqueta">Focos verdes</span>
+        <span class="valor" id="conteo-verde">0</span>
+        </div>
+        <div class="fila-resultado">
+        <span class="foco foco-blanco"></span>
+        <span class="etiqueta">Focos blancos</span>
+        <span class="valor" id="conteo-blanco">0</span>
+        </div>
+        <div class="fila-resultado">
+        <span class="foco foco-rojo"></span>
+        <span class="etiqueta">Focos rojos</span>
+        <span class="valor" id="conteo-rojo">0</span>
+        </div>
+
+        <div class="total-final">
+        <span>Total del lote</span>
+        <span class="valor" id="conteo-total">0</span>
+        </div>
+
+        <button id="btn-reiniciar">Contar otro lote</button>
+    </section>
+
+    </main>
+
+    <script src="../assets/js/lightbulb.js"></script>
+</body>
+</html>
