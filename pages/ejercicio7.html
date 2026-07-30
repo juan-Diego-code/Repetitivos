@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 7 · Hamburguesas (Mientras y Para)</title>
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body data-page="ejercicio7.html">
+
+<main class="wrap">
+  <header class="encabezado">
+    <p class="eyebrow">Ejercicio 7 · Mismo problema del Ejercicio 2, con otros dos ciclos</p>
+    <h1>Hamburguesas Guerreros: variante Mientras / Para</h1>
+    <p class="descripcion">El mismo cálculo del Ejercicio 2, ahora planteado con ciclo Mientras y con ciclo Para.</p>
+  </header>
+
+  <div class="opciones" style="grid-template-columns: 1fr 1fr; margin-bottom:22px;">
+    <button class="opcion" id="btn-tab-mientras" data-tab="mientras">a) Ciclo Mientras</button>
+    <button class="opcion" id="btn-tab-para" data-tab="para">b) Ciclo Para</button>
+  </div>
+  <div class="nota" id="nota-ciclo"></div>
+
+  <section class="tarjeta" id="panel-inicio">
+    <div class="campo">
+      <label for="cantidad">Número de hamburguesas (N)</label>
+      <input type="number" id="cantidad" min="1" step="1" placeholder="Ej. 4">
+    </div>
+    <button id="btn-iniciar">Iniciar compra</button>
+  </section>
+
+  <section class="tarjeta oculto" id="panel-registro">
+    <div class="progreso">
+      <span class="texto-progreso" id="texto-progreso">Hamburguesa 1 de N</span>
+      <div class="barra"><div class="barra-relleno" id="barra-relleno"></div></div>
+    </div>
+    <div class="opciones">
+      <button class="opcion" data-tipo="S">Sencilla<br>$20.000</button>
+      <button class="opcion" data-tipo="D">Doble<br>$25.000</button>
+      <button class="opcion" data-tipo="T">Triple<br>$28.000</button>
+    </div>
+  </section>
+
+  <section class="tarjeta oculto" id="panel-resultado">
+    <h2>Resumen de la compra</h2>
+    <div id="lista"></div>
+    <div class="resumen">
+      <div class="fila-resumen"><span>Subtotal</span><span class="valor" id="subtotal">$0</span></div>
+      <div class="fila-resumen"><span>Cargo por tarjeta (5%)</span><span class="valor" id="cargo">$0</span></div>
+      <div class="total-final"><span class="label">Total a pagar</span><span class="valor" id="total">$0</span></div>
+    </div>
+    <button id="btn-reiniciar" class="secundario-btn" style="margin-top:18px;">Nueva compra</button>
+  </section>
+</main>
+
+<script src="../assets/js/nav.js"></script>
+<script src="../assets/js/ejercicio7.js"></script>
+</body>
+</html>

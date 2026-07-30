@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 10 · Edad promedio por salón</title>
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body data-page="ejercicio10.html">
+
+<main class="wrap">
+  <header class="encabezado">
+    <p class="eyebrow">Ejercicio 10 · Ciclo Para anidado</p>
+    <h1>Edad promedio por salón</h1>
+    <p class="descripcion">Se calcula la edad promedio de cada uno de los M salones de una escuela, y también la edad promedio de toda la escuela. Un ciclo recorre los salones, y dentro de cada salón otro ciclo recorre a sus estudiantes.</p>
+  </header>
+
+  <section class="tarjeta" id="panel-inicio">
+    <div class="campo">
+      <label for="salones">Número de salones (M)</label>
+      <input type="number" id="salones" min="1" step="1" placeholder="Ej. 3">
+    </div>
+    <button id="btn-iniciar">Iniciar</button>
+  </section>
+
+  <section class="tarjeta oculto" id="panel-num-estudiantes">
+    <div class="progreso">
+      <span class="texto-progreso" id="texto-progreso-salon">Salón 1 de M</span>
+      <div class="barra"><div class="barra-relleno" id="barra-salon"></div></div>
+    </div>
+    <div class="campo">
+      <label for="num-estudiantes">¿Cuántos estudiantes tiene este salón?</label>
+      <input type="number" id="num-estudiantes" min="1" step="1">
+    </div>
+    <button id="btn-continuar-salon">Continuar</button>
+  </section>
+
+  <section class="tarjeta oculto" id="panel-edad">
+    <div class="progreso">
+      <span class="texto-progreso" id="texto-progreso-estudiante">Estudiante 1 de N</span>
+      <div class="barra"><div class="barra-relleno" id="barra-estudiante"></div></div>
+    </div>
+    <div class="campo">
+      <label for="edad">Edad del estudiante</label>
+      <input type="number" id="edad" min="0" step="1">
+    </div>
+    <button id="btn-registrar-edad">Registrar edad</button>
+  </section>
+
+  <section class="tarjeta oculto" id="panel-resultado">
+    <h2>Promedios por salón</h2>
+    <div class="tabla-scroll">
+      <table class="tabla">
+        <thead><tr><th>Salón</th><th>Estudiantes</th><th>Edad promedio</th></tr></thead>
+        <tbody id="cuerpo-tabla"></tbody>
+      </table>
+    </div>
+    <div class="resumen">
+      <div class="total-final"><span class="label">Edad promedio de toda la escuela</span><span class="valor" id="promedio-escuela">0</span></div>
+    </div>
+    <button id="btn-reiniciar" class="secundario-btn" style="margin-top:18px;">Nuevo cálculo</button>
+  </section>
+</main>
+
+<script src="../assets/js/nav.js"></script>
+<script src="../assets/js/ejercicio10.js"></script>
+</body>
+</html>

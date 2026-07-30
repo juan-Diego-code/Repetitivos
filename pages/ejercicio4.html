@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 4 · Focos por color</title>
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body data-page="ejercicio4.html">
+
+<main class="wrap">
+  <header class="encabezado">
+    <p class="eyebrow">Ejercicio 4 · Ciclo Para</p>
+    <h1>Conteo de focos por color</h1>
+    <p class="descripcion">De un lote de N focos (verdes, blancos y rojos), el algoritmo contabiliza cuántos focos hay de cada color.</p>
+  </header>
+
+  <section class="tarjeta" id="panel-inicio">
+    <div class="campo">
+      <label for="cantidad">Tamaño del lote (N)</label>
+      <input type="number" id="cantidad" min="1" step="1" placeholder="Ej. 10">
+    </div>
+    <button id="btn-iniciar">Iniciar conteo</button>
+  </section>
+
+  <section class="tarjeta oculto" id="panel-registro">
+    <div class="progreso">
+      <span class="texto-progreso" id="texto-progreso">Foco 1 de N</span>
+      <div class="barra"><div class="barra-relleno" id="barra-relleno"></div></div>
+    </div>
+    <div class="opciones">
+      <button class="opcion" data-color="verde"><span class="foco foco-verde"></span> Verde</button>
+      <button class="opcion" data-color="blanco"><span class="foco foco-blanco"></span> Blanco</button>
+      <button class="opcion" data-color="rojo"><span class="foco foco-rojo"></span> Rojo</button>
+    </div>
+  </section>
+
+  <section class="tarjeta oculto" id="panel-resultado">
+    <h2>Resultado del lote</h2>
+    <div class="fila-resumen"><span class="foco foco-verde" style="margin-right:8px;"></span><span style="flex:1;">Focos verdes</span><span class="valor" id="conteo-verde">0</span></div>
+    <div class="fila-resumen"><span class="foco foco-blanco" style="margin-right:8px;"></span><span style="flex:1;">Focos blancos</span><span class="valor" id="conteo-blanco">0</span></div>
+    <div class="fila-resumen"><span class="foco foco-rojo" style="margin-right:8px;"></span><span style="flex:1;">Focos rojos</span><span class="valor" id="conteo-rojo">0</span></div>
+    <div class="total-final"><span class="label">Total del lote</span><span class="valor" id="conteo-total">0</span></div>
+    <button id="btn-reiniciar" class="secundario-btn" style="margin-top:18px;">Contar otro lote</button>
+  </section>
+</main>
+
+<script src="../assets/js/nav.js"></script>
+<script src="../assets/js/ejercicio4.js"></script>
+</body>
+</html>

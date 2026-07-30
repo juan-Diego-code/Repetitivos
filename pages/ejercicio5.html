@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 5 · Ahorro diario</title>
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body data-page="ejercicio5.html">
+
+<main class="wrap">
+  <header class="encabezado">
+    <p class="eyebrow">Ejercicio 5 · Ciclo Para</p>
+    <h1>Ahorro diario (potencias de 3)</h1>
+    <p class="descripcion">Una persona ahorra $3 el primer día, $9 el segundo, $27 el tercero... cada día ahorra el triple del día anterior. Se calcula el ahorro diario y el total acumulado en el año.</p>
+  </header>
+
+  <div class="nota">Los montos crecen muy rápido (potencias de 3), así que la tabla solo muestra los primeros días; el total sí corresponde a los N días completos.</div>
+
+  <section class="tarjeta">
+    <div class="form-grid">
+      <div class="campo">
+        <label for="dias">Días del período</label>
+        <input type="number" id="dias" value="365" min="1" step="1">
+      </div>
+    </div>
+    <button id="btn-calcular">Calcular ahorro</button>
+  </section>
+
+  <div class="tabla-scroll oculto" id="panel-tabla">
+    <table class="tabla">
+      <thead><tr><th>Día</th><th>Ahorro de ese día</th></tr></thead>
+      <tbody id="cuerpo-tabla"></tbody>
+    </table>
+  </div>
+
+  <section class="resumen oculto" id="panel-resumen">
+    <div class="total-final">
+      <span class="label">Ahorro total acumulado en el período</span>
+      <span class="valor" id="total-anual">$0</span>
+    </div>
+  </section>
+</main>
+
+<script src="../assets/js/nav.js"></script>
+<script src="../assets/js/ejercicio5.js"></script>
+</body>
+</html>
