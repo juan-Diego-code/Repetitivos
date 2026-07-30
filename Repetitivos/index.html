@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Car Counting System</title>
+<link rel="icon" type="image/png" href="./assets/images/CCS-logo.svg">
+
+<title>Ejercicios Repetitivos · Desarrollo de Software</title>
+<link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body data-page="./index.html">
+
+<main class="wrap" style="max-width:960px;">
+  
+  <header class="encabezado">
+    <p class="eyebrow">Institucion Educativa San Francisco de Sales · Desarrollo de Software</p>
+    <h1>Ejercicios repetitivos</h1>
+    <p class="descripcion">Los 22 algoritmos de la guia, cada uno resuelto como una pequeña aplicacion interactiva en HTML, CSS y JavaScript.</p>
+  </header>
+
+  <div class="grid-menu" id="grid-menu"></div>
+</main>
+
+<script src="./assets/js/nav.js"></script>
+<script>
+  const grid = document.getElementById('grid-menu');
+  EJERCICIOS.forEach(e => {
+    const a = document.createElement('a');
+    a.className = 'tarjeta-menu';
+    a.href = e.archivo; // ahora es /pages/ejercicio1.html
+    a.innerHTML = `<span class="n">Ejercicio ${e.n}</span><span class="t">${e.titulo}</span><span class="c">Ciclo ${e.ciclo}</span>`;
+    grid.appendChild(a);
+  });
+</script>
+</body>
+</html>
