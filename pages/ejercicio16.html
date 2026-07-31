@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 16 · Cubo de números naturales</title>
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body data-page="ejercicio16.html">
+
+<main class="wrap">
+  <header class="encabezado">
+    <p class="eyebrow">Ejercicio 16 · Ciclo Mientras</p>
+    <h1>Cubo de números naturales</h1>
+    <p class="descripcion">Dado un grupo de números naturales positivos, el algoritmo calcula e imprime el cubo de cada uno de ellos.</p>
+  </header>
+
+  <section class="tarjeta" id="panel-inicio">
+    <div class="campo">
+      <label for="cantidad">Cantidad de números a ingresar</label>
+      <input type="number" id="cantidad" min="1" step="1" placeholder="Ej. 6">
+    </div>
+    <button id="btn-iniciar">Iniciar</button>
+  </section>
+
+  <section class="tarjeta oculto" id="panel-registro">
+    <div class="progreso">
+      <span class="texto-progreso" id="texto-progreso">Número 1 de N</span>
+      <div class="barra"><div class="barra-relleno" id="barra-relleno"></div></div>
+    </div>
+    <div class="campo">
+      <label for="numero">Número natural positivo</label>
+      <input type="number" id="numero" min="1" step="1" placeholder="Ej. 4">
+    </div>
+    <button id="btn-registrar">Calcular cubo</button>
+  </section>
+
+  <section class="tarjeta oculto" id="panel-resultado">
+    <h2>Resultados</h2>
+    <div class="tabla-scroll">
+      <table class="tabla">
+        <thead><tr><th>Número</th><th>Cubo</th></tr></thead>
+        <tbody id="cuerpo-tabla"></tbody>
+      </table>
+    </div>
+    <button id="btn-reiniciar" class="secundario-btn" style="margin-top:18px;">Nuevo grupo</button>
+  </section>
+</main>
+
+<script src="../assets/js/nav.js"></script>
+<script src="../assets/js/ejercicio16.js"></script>
+</body>
+</html>

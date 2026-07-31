@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 22 · Banco AVVILLAS</title>
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body data-page="ejercicio22.html">
+
+<main class="wrap">
+  <header class="encabezado">
+    <p class="eyebrow">Ejercicio 22 · Ciclo Repetir</p>
+    <h1>Clientes del banco "AVVILLAS"</h1>
+    <p class="descripcion">Para cada cliente se calcula su saldo actual, su pago mínimo y su pago para no generar intereses, además del interés total ganado con los clientes morosos.</p>
+  </header>
+
+  <div class="nota">Un cliente es moroso cuando el pago que depositó es menor al 15% de su saldo anterior. En ese caso, al saldo se le suma 12% de interés y una multa de $200.000.</div>
+
+  <section class="tarjeta" id="panel-inicio">
+    <div class="campo">
+      <label for="cantidad">Número de clientes (N)</label>
+      <input type="number" id="cantidad" min="1" step="1" placeholder="Ej. 4">
+    </div>
+    <button id="btn-iniciar">Iniciar registro</button>
+  </section>
+
+  <section class="tarjeta oculto" id="panel-registro">
+    <div class="progreso">
+      <span class="texto-progreso" id="texto-progreso">Cliente 1 de N</span>
+      <div class="barra"><div class="barra-relleno" id="barra-relleno"></div></div>
+    </div>
+    <div class="form-grid">
+      <div class="campo">
+        <label for="saldo-anterior">Saldo anterior</label>
+        <input type="number" id="saldo-anterior" min="0" step="1">
+      </div>
+      <div class="campo">
+        <label for="compras">Monto de compras</label>
+        <input type="number" id="compras" min="0" step="1">
+      </div>
+      <div class="campo">
+        <label for="pago">Pago depositado</label>
+        <input type="number" id="pago" min="0" step="1">
+      </div>
+    </div>
+    <button id="btn-registrar">Registrar cliente</button>
+  </section>
+
+  <section class="tarjeta oculto" id="panel-resultado">
+    <h2>Resultado por cliente</h2>
+    <div class="tabla-scroll">
+      <table class="tabla">
+        <thead><tr><th>Cliente</th><th>Estado</th><th>Saldo actual</th><th>Pago mínimo</th><th>Pago sin interés</th></tr></thead>
+        <tbody id="cuerpo-tabla"></tbody>
+      </table>
+    </div>
+    <div class="resumen">
+      <div class="total-final"><span class="label">Interés total ganado con clientes morosos</span><span class="valor" id="interes-total">$0</span></div>
+    </div>
+    <button id="btn-reiniciar" class="secundario-btn" style="margin-top:18px;">Nuevo registro</button>
+  </section>
+</main>
+
+<script src="../assets/js/nav.js"></script>
+<script src="../assets/js/ejercicio22.js"></script>
+</body>
+</html>

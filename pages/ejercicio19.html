@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 19 · Impuesto vehicular</title>
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body data-page="ejercicio19.html">
+
+<main class="wrap">
+  <header class="encabezado">
+    <p class="eyebrow">Ejercicio 19 · Ciclo Repetir</p>
+    <h1>Impuesto vehicular por clave</h1>
+    <p class="descripcion">El gerente de una compañía automotriz desea el impuesto de cada vehículo, el total por categoría y el total general. Clave 1 = 10%, clave 2 = 7%, clave 3 = 5%.</p>
+  </header>
+
+  <div class="tabla-tasas" style="display:flex; gap:10px; margin-bottom:24px; flex-wrap:wrap;">
+    <div class="tarjeta" style="flex:1; min-width:120px; margin:0; padding:14px;"><b style="color:var(--secundario); font-size:18px; display:block;">10%</b><span style="font-size:12px; color:var(--texto-mute);">Clave 1</span></div>
+    <div class="tarjeta" style="flex:1; min-width:120px; margin:0; padding:14px;"><b style="color:var(--secundario); font-size:18px; display:block;">7%</b><span style="font-size:12px; color:var(--texto-mute);">Clave 2</span></div>
+    <div class="tarjeta" style="flex:1; min-width:120px; margin:0; padding:14px;"><b style="color:var(--secundario); font-size:18px; display:block;">5%</b><span style="font-size:12px; color:var(--texto-mute);">Clave 3</span></div>
+  </div>
+
+  <section class="tarjeta">
+    <div class="form-grid">
+      <div class="campo">
+        <label for="clave">Clave</label>
+        <select id="clave">
+          <option value="1">1 — 10%</option>
+          <option value="2">2 — 7%</option>
+          <option value="3">3 — 5%</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="costo">Costo del vehículo</label>
+        <input type="number" id="costo" placeholder="0.00" min="0" step="0.01">
+      </div>
+    </div>
+    <button id="btn-agregar">Agregar vehículo</button>
+  </section>
+
+  <div id="lista">
+    <p class="vacio" id="mensaje-vacio">Aún no se ha registrado ningún vehículo.</p>
+  </div>
+
+  <section class="resumen">
+    <h2>Resumen por categoría</h2>
+    <div class="fila-resumen"><span>Total impuesto · Clave 1</span><span class="valor" id="total-1">$0</span></div>
+    <div class="fila-resumen"><span>Total impuesto · Clave 2</span><span class="valor" id="total-2">$0</span></div>
+    <div class="fila-resumen"><span>Total impuesto · Clave 3</span><span class="valor" id="total-3">$0</span></div>
+    <div class="total-final"><span class="label">Total general de la flotilla</span><span class="valor" id="total-general">$0</span></div>
+  </section>
+</main>
+
+<script src="../assets/js/nav.js"></script>
+<script src="../assets/js/ejercicio19.js"></script>
+</body>
+</html>

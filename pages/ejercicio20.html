@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 20 · Seno de un ángulo</title>
+<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body data-page="ejercicio20.html">
+
+<main class="wrap">
+  <header class="encabezado">
+    <p class="eyebrow">Ejercicio 20 · Ciclo Para</p>
+    <h1>Seno de un ángulo por serie</h1>
+    <p class="descripcion">Se aproxima sen(X) mediante la serie: X − X³/3! + X⁵/5! − X⁷/7! + ... (X en radianes).</p>
+  </header>
+
+  <section class="tarjeta">
+    <div class="form-grid">
+      <div class="campo">
+        <label for="x">Ángulo X (radianes)</label>
+        <input type="number" id="x" value="1" step="any">
+      </div>
+      <div class="campo">
+        <label for="terminos">Número de términos</label>
+        <input type="number" id="terminos" value="6" min="1" step="1">
+      </div>
+    </div>
+    <button id="btn-calcular">Calcular</button>
+  </section>
+
+  <div class="tabla-scroll oculto" id="panel-tabla">
+    <table class="tabla">
+      <thead><tr><th>Término</th><th>Valor del término</th><th>Suma acumulada</th></tr></thead>
+      <tbody id="cuerpo-tabla"></tbody>
+    </table>
+  </div>
+
+  <section class="resumen oculto" id="panel-resumen">
+    <div class="fila-resumen"><span>Aproximación por serie</span><span class="valor" id="resultado-serie">0</span></div>
+    <div class="fila-resumen"><span>Valor real (Math.sin)</span><span class="valor" id="resultado-real">0</span></div>
+    <div class="total-final"><span class="label">Diferencia</span><span class="valor" id="diferencia">0</span></div>
+  </section>
+</main>
+
+<script src="../assets/js/nav.js"></script>
+<script src="../assets/js/ejercicio20.js"></script>
+</body>
+</html>
